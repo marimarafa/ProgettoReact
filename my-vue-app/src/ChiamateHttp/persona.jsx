@@ -6,15 +6,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './stile.css'
 
-
-function Wp() {
+function Persona() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     // Effettua una chiamata HTTP con fetch
-    fetch('http://127.0.0.1:5004/1')
+    fetch('http://127.0.0.1:5004/3')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Errore nella risposta del server');
@@ -43,32 +42,32 @@ function Wp() {
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <NavDropdown title="Elenchi" id="basic-nav-dropdown">
-              <NavDropdown.Item href="http://127.0.0.1:5004/2">Elenco Assenze  </NavDropdown.Item> /  
-              <NavDropdown.Item href="http://127.0.0.1:5004/3"> Elenco Persone</NavDropdown.Item>
+              <NavDropdown.Item href="http://127.0.0.1:5004/1">Elenco WP  </NavDropdown.Item> /  
+              <NavDropdown.Item href="http://127.0.0.1:5004/2"> Elenco Assenze</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-      <h2>Elenco WP</h2>
+      <h2>Elenco Persone</h2>
       <Table striped bordered hover>
         <thead>
           <tr>
             <th>ID</th>
             <th>NOME</th>
-            <th>PROGETTO</th>
-            <th>INIZIO</th>
-            <th>FINE</th>
+            <th>COGNOME</th>
+            <th>POSIZIONE</th>
+            <th>STIPENDIO</th>
           </tr>
         </thead>
         <tbody>
           {users.map((user) => (
             <tr key={user.id}>
-              <td>{user.id}</td>
+            <td> {user.id}</td>
               <td>{user.nome}</td>
-              <td>{user.progetto}</td>
-              <td>{user.inizio}</td>
-              <td>{user.fine}</td>
+              <td>{user.cognome}</td>
+              <td>{user.posizione}</td>
+              <td>{user.stipendio}</td>
             </tr>
           ))}
         </tbody>
@@ -77,4 +76,4 @@ function Wp() {
   );
 };
 
-export default Wp;
+export default Persona;

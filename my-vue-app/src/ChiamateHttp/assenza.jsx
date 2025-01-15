@@ -4,9 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import './wp.css'
+import './stile.css'
 
-function FetchExampl() {
+function Assenza() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -42,8 +42,8 @@ function FetchExampl() {
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <NavDropdown title="Elenchi" id="basic-nav-dropdown">
-              <NavDropdown.Item href="./wp.jsx">Elenco WP  </NavDropdown.Item> /  
-              <NavDropdown.Item href="#action/3.4"> Elenco Persone</NavDropdown.Item>
+              <NavDropdown.Item href="http://127.0.0.1:5004/1">Elenco WP  </NavDropdown.Item> /  
+              <NavDropdown.Item href="http://127.0.0.1:5004/3"> Elenco Persone</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -62,6 +62,7 @@ function FetchExampl() {
         <tbody>
           {users.map((user) => (
             <tr key={user.id}>
+              <td> {user.id}</td>
               <td>{user.persona}</td>
               <td>{user.tipo}</td>
               <td>{user.giorno}</td>
@@ -73,4 +74,4 @@ function FetchExampl() {
   );
 };
 
-export default FetchExampl;
+export default Assenza;

@@ -2,15 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import FetchExample from './ChiamateHttp/wp'
-import FetchExampl from './ChiamateHttp/assenza'
+import Persona from './ChiamateHttp/persona'
+import Assenza from './ChiamateHttp/assenza'
+import Wp from './ChiamateHttp/wp'
 
 function App() {
 
   return (
     <>
-      <FetchExample></FetchExample>
-      <FetchExampl></FetchExampl>
+     <Wp></Wp>
+     <Assenza></Assenza>
+     <Persona></Persona>
     </>
   )
 }
