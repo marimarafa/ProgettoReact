@@ -1,0 +1,90 @@
+/* Stile per la tabella */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Per evitare doppi bordi */
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Intestazioni della tabella */
+  table thead {
+    background-color: #343a40; /* Colore di sfondo grigio scuro */
+    color: white; /* Colore del testo bianco */
+  }
+  
+  /* Righe della tabella */
+  table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa; /* Colore di sfondo per le righe dispari (grigio chiaro) */
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Colore di sfondo per le righe pari (bianco) */
+  }
+  
+  /* Stile per le celle della tabella */
+  table td, table th {
+    padding: 12px; /* Aggiungi spazio nelle celle */
+    text-align: center; /* Allinea il testo al centro */
+    border: 1px solid #dee2e6; /* Bordo grigio chiaro */
+  }
+  
+  /* Effetto al passaggio del mouse su una riga */
+  table tbody tr:hover {
+    background-color: #e9ecef; /* Colore di sfondo quando si passa il mouse su una riga */
+  }
+  
+  /* Bordo della tabella */
+  table {
+    border: 2px solid #007bff; /* Colore bordo blu chiaro */
+    border-radius: 10px; /* Angoli arrotondati */
+  }
+  
+  /* Stile per le celle di intestazione */
+  table th {
+    font-weight: bold; /* Testo in grassetto */
+    text-transform: uppercase; /* Testo maiuscolo */
+  }
+  
+  /* Colore del bordo per le intestazioni */
+  table th {
+    border-bottom: 2px solid #007bff; /* Bordo inferiore blu chiaro per le intestazioni */
+  }
+  
+  /* Colore del bordo per le righe */
+  table td {
+    border-bottom: 1px solid #007bff; /* Bordo blu chiaro per le celle */
+  }
+ /* Stile personalizzato per la navbar */
+.navbar {
+    background-color: #f8f9fa; /* Colore di sfondo della navbar */
+    padding: 10px 20px; /* Padding per la navbar */
+    display: contents;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+ 
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    text-decoration: none; /* Rimuove la sottolineatura dei link */
+    color: #007bff; /* Colore blu per i link */
+    font-weight: bold; /* Testo in grassetto */
+    padding: 0 10px;
+  }
+  
+  /* Separatore tra i link */
+  .separator {
+    color: #007bff; /* Colore blu per il separatore */
+    padding: 0 5px; /* Distanza tra il separatore e i link */
+  }
+  
+  /* Hover sugli elementi della navbar */
+  .nav-link:hover {
+    color: #0056b3; /* Colore più scuro al passaggio del mouse */
+  }
+  
