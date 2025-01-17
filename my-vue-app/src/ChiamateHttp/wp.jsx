@@ -43,8 +43,8 @@ function Wp() {
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <NavDropdown title="Elenchi" id="basic-nav-dropdown">
-              <NavDropdown.Item href="http://127.0.0.1:5004/2">Elenco Assenze  </NavDropdown.Item> /  
-              <NavDropdown.Item href="http://127.0.0.1:5004/3"> Elenco Persone</NavDropdown.Item>
+              <NavDropdown.Item href="">Elenco Assenze  </NavDropdown.Item> /  
+              <NavDropdown.Item href=""> Elenco Persone</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

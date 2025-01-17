@@ -42,8 +42,8 @@ function Assenza() {
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <NavDropdown title="Elenchi" id="basic-nav-dropdown">
-              <NavDropdown.Item href="http://localhost:5173//wp.jsx">Elenco WP  </NavDropdown.Item> /  
-              <NavDropdown.Item href="http://localhost:5173/persona.jsx"> Elenco Persone</NavDropdown.Item>
+              <NavDropdown.Item href="">Elenco WP  </NavDropdown.Item> /  
+              <NavDropdown.Item href=""> Elenco Persone</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
