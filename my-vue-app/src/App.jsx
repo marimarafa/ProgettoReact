@@ -24,7 +24,7 @@ function App() {
 
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<HomePage />} /> {/* Imposta la pagina iniziale */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/wp" element={<Wp />} />
           <Route path="/assenza" element={<Assenza />} />
           <Route path="/persona" element={<Persona />} />
