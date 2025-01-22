@@ -33,7 +33,7 @@
   
   .home-header p {
     font-size: 1.2rem;
-    color: #7f8c8d;
+    color: black;
   }
   
   /* Contenuto delle card */
@@ -73,7 +73,7 @@
   
   .home-link {
     text-decoration: none;
-    background-color: #3498db;
+    background-color:cadetblue;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -82,7 +82,7 @@
   }
   
   .home-link:hover {
-    background-color: #2980b9;
+    background-color:cadetblue;
   }
   
   /* Responsività per dispositivi mobili */

@@ -10,7 +10,7 @@ function App() {
     <Router>
       <header className="header">
         <div className="logo">
-          <h1>HOME</h1>
+          
         </div>
         <nav>
           <ul className="nav-links">
