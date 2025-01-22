@@ -54,37 +54,3 @@ table {
   table td {
     border-bottom: 1px solid #007bff; /* Bordo blu chiaro per le celle */
   }
- /* Stile personalizzato per la navbar */
-.navbar {
-    background-color: #f8f9fa; /* Colore di sfondo della navbar */
-    padding: 10px 20px; /* Padding per la navbar */
-    display: contents;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
- 
-  
-  .navbar-nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-link {
-    text-decoration: none; /* Rimuove la sottolineatura dei link */
-    color: #007bff; /* Colore blu per i link */
-    font-weight: bold; /* Testo in grassetto */
-    padding: 0 10px;
-  }
-  
-  /* Separatore tra i link */
-  .separator {
-    color: #007bff; /* Colore blu per il separatore */
-    padding: 0 5px; /* Distanza tra il separatore e i link */
-  }
-  
-  /* Hover sugli elementi della navbar */
-  .nav-link:hover {
-    color: #0056b3; /* Colore più scuro al passaggio del mouse */
-  }
-  

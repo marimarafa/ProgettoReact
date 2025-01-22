@@ -1,10 +1,12 @@
+// persona.jsx
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import './stile.css'
+import { Link } from 'react-router-dom';
+import './stile.css';
 
 function Persona() {
   const [users, setUsers] = useState([]);
@@ -12,43 +14,23 @@ function Persona() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Effettua una chiamata HTTP con fetch
     fetch('http://127.0.0.1:5004/3')
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Errore nella risposta del server');
+          throw new Error(`Errore ${response.status}: ${response.statusText}`);
         }
-        return response.json(); // Converte la risposta in formato JSON
+        return response.json();
       })
-      .then((data) => {
-        setUsers(data);  // Imposta lo stato con i dati ricevuti
-        setLoading(false); // Rimuove lo stato di caricamento
-      })
-      .catch((error) => {
-        setError(error.message); // Gestisce gli errori
-        setLoading(false);
-      });
-  }, []); // L'array vuoto significa che la chiamata HTTP avviene una sola volta, al primo render
+      .then((data) => setUsers(data))
+      .catch((error) => setError(error.message))
+      .finally(() => setLoading(false));
+  }, []);
 
   if (loading) return <p>Caricamento...</p>;
-  if (error) return <p>Errore: {error}</p>;
+  if (error) return <p style={{ color: 'red' }}>Errore: {error}</p>;
 
   return (
     <div>
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="Elenchi" id="basic-nav-dropdown">
-              <NavDropdown.Item href="">Elenco WP  </NavDropdown.Item> /  
-              <NavDropdown.Item href=""> Elenco Assenze</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
       <h2>Elenco Persone</h2>
       <Table striped bordered hover>
         <thead>
@@ -63,7 +45,7 @@ function Persona() {
         <tbody>
           {users.map((user) => (
             <tr key={user.id}>
-            <td> {user.id}</td>
+              <td>{user.id}</td>
               <td>{user.nome}</td>
               <td>{user.cognome}</td>
               <td>{user.posizione}</td>

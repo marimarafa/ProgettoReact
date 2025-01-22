@@ -36,20 +36,6 @@ function Wp() {
 
   return (
     <div>
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="Elenchi" id="basic-nav-dropdown">
-              <NavDropdown.Item href="">Elenco Assenze  </NavDropdown.Item> /  
-              <NavDropdown.Item href=""> Elenco Persone</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
       <h2>Elenco WP</h2>
       <Table striped bordered hover>
         <thead>

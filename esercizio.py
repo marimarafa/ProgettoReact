@@ -10,9 +10,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 #per vedere l'ip della macchina sotto linux ip addr show
-# Configurazione database
+# Configurazione database 
 db_config = {
-    "host": "172.19.160.4",  # Cambio con l'indirizzo IP della macchina
+    "host": "192.168.1.61",  # Cambio con l'indirizzo IP della macchina
     "port": "5432",
     "dbname":"Accademia",
     "user": "postgres",
