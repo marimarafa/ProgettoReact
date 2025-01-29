@@ -12,7 +12,7 @@ CORS(app)
 #per vedere l'ip della macchina sotto linux ip addr show
 # Configurazione database 
 db_config = {
-    "host": "192.168.1.61",  # Cambio con l'indirizzo IP della macchina
+    "host": "127.0.0.1",  # Cambio con l'indirizzo IP della macchina
     "port": "5432",
     "dbname":"Accademia",
     "user": "postgres",
