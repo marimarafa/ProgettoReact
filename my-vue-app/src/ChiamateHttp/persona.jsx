@@ -1,4 +1,3 @@
-// persona.jsx
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
